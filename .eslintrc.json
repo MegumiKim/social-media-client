@@ -21,5 +21,6 @@
         "sourceType": "module"
     },
     "rules": {
+        "no-unused-vars": "warn"
     }
 }
