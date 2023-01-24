@@ -12,8 +12,10 @@
     "lint-fix": "eslint src/**/*.js",
     "prepare": "husky install",
     "test-unit": "jest",
-    "test": "npm run test-e2e",
-    "test-e2e": "cypress open"
+    "test": "npm run test-unit && npm run test-e2e-cli",
+    "test-e2e": "cypress open",
+    "test-e2e-report": "cypress run --reporter mochawesome",
+    "test-e2e-cli": "cypress run"
   },
   "keywords": [],
   "author": "Noroff",
