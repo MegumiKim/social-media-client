@@ -1,3 +1,6 @@
+const EMAIL = Cypress.EMAIL;
+const PASSWORD = Cypress.PASSWORD;
+
 describe("valid user process", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -12,8 +15,8 @@ describe("valid user process", () => {
       .click();
     cy.wait(1000);
 
-    cy.get("input#loginEmail").type("megumi@noroff.no");
-    cy.get("input#loginPassword").type("11111111");
+    cy.get("input#loginEmail").type(EMAIL);
+    cy.get("input#loginPassword").type(PASSWORD);
     cy.wait(1000);
 
     cy.get("button[type='submit']").contains("Login").click();
