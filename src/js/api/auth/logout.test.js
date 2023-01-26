@@ -18,6 +18,7 @@ localStorage.setItem("profile", profile);
 
 describe("logout", () => {
   it("removes the access token and profile data from local storage", () => {
+    // check if token and profile are saved before removed
     localStorage.getItem("token", accessToken);
     localStorage.getItem("profile", profile);
 

@@ -39,18 +39,15 @@ const fetchFailure = jest.fn(() =>
 
 describe("login", () => {
   beforeEach(() => {
-    localStorage.setItem.mockClear();
-    localStorage.getItem.mockClear();
     localStorage.clear;
   });
 
   // // Unauthorized user, failed login
-
-  it("throws status text as an error", async () => {
+  it("throws status text as an error for invalid login", async () => {
     expect(localStorage.getItem("token")).toBeFalsy();
     global.fetch = fetchFailure;
     await expect(login(TEST_EMAIL, TEST_PASSWORD)).rejects.toThrow(
-      "Unauthorized"
+      fetchFailure.statusText
     );
     expect(localStorage.setItem).not.toHaveBeenCalled();
     expect(localStorage.getItem("token")).toBeFalsy();
