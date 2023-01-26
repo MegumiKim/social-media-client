@@ -9,6 +9,12 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  env:
+    USER_EMAIL: ${{secrets.USER_EMAIL}}
+    USER_PASSWORD: ${{secrets.USER_PASSWORD}}
+    USER_NAME: ${{secrets.USER_NAME}}
+    USER_TOKEN: ${{secrets.USER_TOKEN}}
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
