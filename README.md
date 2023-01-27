@@ -32,6 +32,12 @@ npm i
 npm run build
 ```
 
+### e2e Testing
+
+- Create .env file in the project's root folder
+- Populate the file with your test user credentials using .env.example
+- Read to test!
+
 ## Status Badges
 
 [![Automated E2E Testing](https://github.com/MegumiKim/social-media-client/actions/workflows/e2e-test.yml/badge.svg)](https://github.com/MegumiKim/social-media-client/actions/workflows/e2e-test.yml)
