@@ -1,10 +1,6 @@
-// const EMAIL = Cypress.env("USER_EMAIL");
-// const PASSWORD = Cypress.env("USER_PASSWORD");
-// const USER_NAME = Cypress.env("USER_NAME");
-
-const EMAIL = "megumi@noroff.no";
-const PASSWORD = "11111111";
-const USER_NAME = "Megumi";
+const EMAIL = Cypress.env("USER_EMAIL");
+const PASSWORD = Cypress.env("USER_PASSWORD");
+const USER_NAME = Cypress.env("USER_NAME");
 
 describe("login", () => {
   it("saves access token in local storage and redirect the user to profile page", () => {

@@ -1,5 +1,4 @@
-// const USER_NAME = Cypress.env("USER_NAME");
-const USER_NAME = "Megumi";
+const USER_NAME = Cypress.env("USER_NAME");
 
 describe("login with invalid credentials", () => {
   it("fails an user with invalid email", () => {
